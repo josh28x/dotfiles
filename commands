@@ -1,0 +1,3 @@
+sudo - grant super user permission
+
+grep -r - ctrl + f but for command line text, -r means recursive so all files not just one
