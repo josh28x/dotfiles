@@ -14,7 +14,7 @@ for name in [x for x in dir(fastapi) if not x.startswith('_')]:
         print(f'{name}: {obj_type}')
 "
 
-
+# to output debug messages
 PYTHONUNBUFFERED=1 - Forces Python programs to output immediately
 stdbuf -o0 -e0 - Disables buffering for ANY program (stdout and stderr)
 2>&1 - Combines stderr and stdout into one stream
@@ -24,3 +24,17 @@ tee debug_output.txt - Shows output AND saves to file simultaneously
 PYTHONUNBUFFERED=1 stdbuf -o0 -e0 ANY_COMMAND_HERE 2>&1 | tee debug_output.txt
 
 e.g, command is bash.rc -> PYTHONUNBUFFERED=1 stdbuf -o0 -e0 bash run.sh 2>&1 | tee debug_output.txt
+
+# how to know what linux distro i am on
+
+ls /etc/*release* 
+# what this does? 
+# list files inside etc containing "release" 
+# we search etc because that is where system-wide configuration lives on Unix/Linux
+# In terms of the FHS (File Hierarchy Standard)
+
+
+
+cat /etc/os-release
+
+
